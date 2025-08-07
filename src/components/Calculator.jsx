@@ -98,19 +98,19 @@ const Calculator = () => {
     setPrevious(null)
   }
 
-
+  console.log(current)
   return (
     <div className="calc_Container">
       <h2>React Calculator</h2>
-      <Display value={current} />
+      <Display value={current} setCurrent={setCurrent}/>
       <div className="button_grid">
+        <button className="reset_btn" onClick={handleAC}>AC</button>
         <div className="num_grid">
           {buttons.map((btn, index) => (
             <Button key={index} label={btn} onClick={()=>{handleClick(btn)}}/>
           ))}
         </div>
       </div>
-      <button className="reset_btn" onClick={handleAC}>AC</button>
     </div>
   );
 };
