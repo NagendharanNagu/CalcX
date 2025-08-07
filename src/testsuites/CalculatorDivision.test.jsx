@@ -6,3 +6,5 @@ test("Dividing two single-digit numbers correctly", () => {
   pressButtons(['8','/','4','='])
   expectDisplayToBe('2')
 });
+
+
