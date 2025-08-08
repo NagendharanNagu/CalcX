@@ -12,6 +12,10 @@ export const pressButtons = (sequence)=>{
 };
 
 export const expectDisplayToBe = (value)=>{
-    expect(screen.getByLabelText('calculator-display')).toHaveTextContent(value);
+    expect(screen.getByLabelText('calculator-display')).toHaveValue(value);
 };
 
+export const expectButtonToBePresent = (label) => {
+  const button = screen.getByText(label);
+  expect(button).toBeInTheDocument();
+};
